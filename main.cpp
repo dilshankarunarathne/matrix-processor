@@ -242,7 +242,28 @@ int main() {
     std::cout << "How many matrices will you be entering (1/2): ";
     std::cin >> isOne;
     if (isOne == 'y' || isOne == 'Y') {
-        
+        Matrix m1;
+        std::cout << "Enter the first matrix: " << std::endl;
+        m1.read();
+        std::cout << "The matrix you entered is: " << std::endl;
+        m1.print();
+        std::cout << "The transpose of the matrix is: " << std::endl;
+        m1.transpose().print();
+        std::cout << "The rank of the matrix is: " << m1.rank() << std::endl;
+        std::cout << "The adjoin of the matrix is: " << std::endl;
+        m1.adjoin().print();
+        std::cout << "The inverse of the matrix is: " << std::endl;
+        m1.inverse().print();
+    } else {
+        Matrix m1, m2;
+        std::cout << "Enter the first matrix: " << std::endl;
+        m1.read();
+        std::cout << "Enter the second matrix: " << std::endl;
+        m2.read();
+        std::cout << "The first matrix is: " << std::endl;
+        m1.print();
+        std::cout << "The second matrix is: " << std::endl;
+        m2.print();
     }
 
 
