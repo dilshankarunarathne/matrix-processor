@@ -219,6 +219,25 @@ public:
     }
 
     /**
+     * @brief Reads a matrix from a stream
+     * @param in The stream to read from
+     * @param matrix The matrix to read into
+     * @return The stream
+     * @details This method reads a matrix from a stream
+     *    and returns the stream.
+     *    The matrix is read in the following format:
+     *    1 2 3
+     *    4 5 6
+     *    7 8 9
+     *    where the numbers are the elements of the matrix.
+     *    The elements are separated by spaces.
+     *    The rows are separated by newlines.
+     *    The matrix is read into the matrix parameter.
+     *    If the matrix cannot be read, the matrix parameter
+     *    is not modified.
+     */
+
+    /**
      * @brief Prints the matrix
      * @details This method prints the matrix to the standard
      *       output stream.
