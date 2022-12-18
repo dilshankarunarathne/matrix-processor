@@ -308,11 +308,11 @@ void tests() {
     m2.print();
     std::cout << std::endl;
 
-    Matrix m3 = m1.add(m2);
+    Matrix m3 = m1 + m2;
     m3.print();
     std::cout << std::endl;
 
-    Matrix m4 = m1.subtract(m2);
+    Matrix m4 = m1 - m2;
     m4.print();
     std::cout << std::endl;
 
@@ -320,7 +320,7 @@ void tests() {
     m5.print();
     std::cout << std::endl;
 
-    Matrix m6 = m1.multiply(m2);
+    Matrix m6 = m1 * m2;
     m6.print();
     std::cout << std::endl;
 
