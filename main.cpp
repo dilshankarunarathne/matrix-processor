@@ -140,6 +140,15 @@ public:
      * @details This method transposes a matrix and returns
      *      the result.
      */
+    Matrix transpose() const {
+        Matrix result;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result.m[i][j] = m[j][i];
+            }
+        }
+        return result;
+    }
 
     /**
      * @brief Prints the matrix
