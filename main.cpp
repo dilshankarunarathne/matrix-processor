@@ -105,7 +105,7 @@ public:
      * @details This method multiplies a matrix with a scalar
      *      and returns the result.
      */
-    Matrix multiply(int scalar) const {
+    Matrix operator*(int scalar) const {
         Matrix result;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -285,14 +285,13 @@ int main() {
         std::cin >> m1;
         std::cout << "Enter the second matrix: " << std::endl;
         std::cin >> m2;
-        std::cout << "The first matrix is: " << std::endl;
-        m1.print();
-        std::cout << "The second matrix is: " << std::endl;
-        m2.print();
+
         std::cout << "The addition of the two matrices is: " << std::endl;
         (m1 + m2).print();
         std::cout << "The subtraction of the two matrices is: " << std::endl;
         (m1 - m2).print();
+        std::cout << "Scalar multiplication of the first matrix by 2 is: " << std::endl;
+        (m1 * 2).print();
         std::cout << "The multiplication of the two matrices is: " << std::endl;
         (m1 * m2).print();
     }
@@ -317,7 +316,7 @@ void tests() {
     m4.print();
     std::cout << std::endl;
 
-    Matrix m5 = m1.multiply(2);
+    Matrix m5 = m1 * 2;
     m5.print();
     std::cout << std::endl;
 
