@@ -137,6 +137,8 @@ public:
     /**
      * @brief Transposes a matrix
      * @return The transposed matrix
+     * @details This method transposes a matrix and returns
+     *      the result.
      */
 
     /**
