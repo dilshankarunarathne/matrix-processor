@@ -263,10 +263,9 @@ void tests();
 int main() {
     char isOne;
 
-    // Prompts the user to enter the matrix
     std::cout << "How many matrices will you be entering (1/2): ";
     std::cin >> isOne;
-    if (isOne == 'y' || isOne == 'Y') {
+    if (isOne == '1') {
         Matrix m1;
         std::cout << "Enter the first matrix: " << std::endl;
         std::cin >> m1;
@@ -290,8 +289,7 @@ int main() {
         std::cout << "The second matrix is: " << std::endl;
         m2.print();
     }
-
-
+    
     return 0;
 }
 
