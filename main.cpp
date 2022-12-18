@@ -151,6 +151,11 @@ public:
     }
 
     /**
+     * @brief Ranks a matrix
+     * @return The rank of the matrix
+     */
+
+    /**
      * @brief Prints the matrix
      * @details This method prints the matrix to the standard
      *       output stream.
