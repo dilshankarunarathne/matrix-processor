@@ -156,6 +156,34 @@ public:
      * @details This method ranks a matrix and returns
      *     the result.
      */
+    int rank() const {
+        int r = 0;
+        Matrix temp = *this;
+        for (int i = 0; i < 3; i++) {
+            if (temp.m[i][i] == 0) {
+                for (int j = i + 1; j < 3; j++) {
+                    if (temp.m[j][i] != 0) {
+                        for (int k = 0; k < 3; k++) {
+                            int t = temp.m[i][k];
+                            temp.m[i][k] = temp.m[j][k];
+                            temp.m[j][k] = t;
+                        }
+                        break;
+                    }
+                }
+            }
+            if (temp.m[i][i] != 0) {
+                for (int j = i + 1; j < 3; j++) {
+                    int f = temp.m[j][i] / temp.m[i][i];
+                    for (int k = 0; k < 3; k++) {
+                        temp.m[j][k] -= f * temp.m[i][k];
+                    }
+                }
+                r++;
+            }
+        }
+        return r;
+    }
 
     /**
      * @brief Prints the matrix
