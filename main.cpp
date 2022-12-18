@@ -186,6 +186,22 @@ public:
     }
 
     /**
+     * @brief Adjoin of a matrix
+     * @return The adjoin of the matrix
+     * @details This method calculates the adjoin of a matrix
+     *     and returns the result.
+     */
+    Matrix adjoin() const {
+        Matrix result;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result.m[i][j] = m[(i + 1) % 3][(j + 1) % 3] * m[(i + 2) % 3][(j + 2) % 3] - m[(i + 1) % 3][(j + 2) % 3] * m[(i + 2) % 3][(j + 1) % 3];
+            }
+        }
+        return result;
+    }
+
+    /**
      * @brief Prints the matrix
      * @details This method prints the matrix to the standard
      *       output stream.
