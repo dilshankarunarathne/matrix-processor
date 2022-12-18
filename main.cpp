@@ -272,6 +272,7 @@ int main() {
         std::cin >> m1;
         std::cout << "The matrix you entered is: " << std::endl;
         m1.print();
+
         std::cout << "The transpose of the matrix is: " << std::endl;
         m1.transpose().print();
         std::cout << "The rank of the matrix is: " << m1.rank() << std::endl;
@@ -297,45 +298,4 @@ int main() {
     }
 
     return 0;
-}
-
-void tests() {
-    Matrix m1 = Matrix(1, 2, 3, 4, 5, 6, 7, 8, 9);
-    m1.print();
-    std::cout << std::endl;
-
-    Matrix m2 = Matrix(5, 6, 7, 8, 2, 4, 3, 4, 9);
-    m2.print();
-    std::cout << std::endl;
-
-    Matrix m3 = m1 + m2;
-    m3.print();
-    std::cout << std::endl;
-
-    Matrix m4 = m1 - m2;
-    m4.print();
-    std::cout << std::endl;
-
-    Matrix m5 = m1 * 2;
-    m5.print();
-    std::cout << std::endl;
-
-    Matrix m6 = m1 * m2;
-    m6.print();
-    std::cout << std::endl;
-
-    Matrix m7 = m1.transpose();
-    m7.print();
-    std::cout << std::endl;
-
-    std::cout << m1.rank() << std::endl;
-    std::cout << std::endl;
-
-    Matrix m8 = m1.adjoin();
-    m8.print();
-    std::cout << std::endl;
-
-    Matrix m9 = m1.inverse();
-    m9.print();
-    std::cout << std::endl;
 }
