@@ -233,7 +233,15 @@ public:
     }
 };
 
+void tests();
+
 int main() {
+
+
+    return 0;
+}
+
+void tests() {
     Matrix m1 = Matrix(1, 2, 3, 4, 5, 6, 7, 8, 9);
     m1.print();
     std::cout << std::endl;
@@ -272,6 +280,4 @@ int main() {
     Matrix m9 = m1.inverse();
     m9.print();
     std::cout << std::endl;
-
-    return 0;
 }
