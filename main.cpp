@@ -78,7 +78,22 @@ public:
         return result;
     }
 
-
+    /**
+     * @brief Subtracts two matrices
+     * @param other The matrix to subtract
+     * @return The difference of the two matrices
+     * @details This method subtracts two matrices and returns
+     *       the result.
+     */
+    Matrix subtract(const Matrix& other) const {
+        Matrix result;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result.m[i][j] = m[i][j] - other.m[i][j];
+            }
+        }
+        return result;
+    }
 };
 
 int main() {
