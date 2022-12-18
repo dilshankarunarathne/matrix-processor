@@ -234,6 +234,14 @@ public:
      *    The rows are separated by newlines.
      *    The matrix is read into the matrix parameter.
      */
+    friend std::istream& operator>>(std::istream& in, Matrix& matrix) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                in >> matrix.m[i][j];
+            }
+        }
+        return in;
+    }
 
     /**
      * @brief Prints the matrix
@@ -261,7 +269,7 @@ int main() {
     if (isOne == 'y' || isOne == 'Y') {
         Matrix m1;
         std::cout << "Enter the first matrix: " << std::endl;
-        m1.read();
+        std::cin >> m1;
         std::cout << "The matrix you entered is: " << std::endl;
         m1.print();
         std::cout << "The transpose of the matrix is: " << std::endl;
@@ -274,9 +282,9 @@ int main() {
     } else {
         Matrix m1, m2;
         std::cout << "Enter the first matrix: " << std::endl;
-        m1.read();
+        std::cin >> m1;
         std::cout << "Enter the second matrix: " << std::endl;
-        m2.read();
+        std::cin >> m2;
         std::cout << "The first matrix is: " << std::endl;
         m1.print();
         std::cout << "The second matrix is: " << std::endl;
