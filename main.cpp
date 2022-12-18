@@ -71,7 +71,7 @@ public:
      *        The result is undefined if the matrices are
      *        not of the same size.
      */
-    Matrix add(const Matrix& other) const {
+    Matrix operator+(const Matrix& other) const {
         Matrix result;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -88,7 +88,7 @@ public:
      * @details This method subtracts two matrices and returns
      *       the result.
      */
-    Matrix subtract(const Matrix& other) const {
+    Matrix operator-(const Matrix& other) const {
         Matrix result;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -122,7 +122,7 @@ public:
      * @details This method multiplies two matrices and returns
      *       the result.
      */
-    Matrix multiply(const Matrix& other) const {
+    Matrix operator*(const Matrix& other) const {
         Matrix result;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
