@@ -233,8 +233,6 @@ public:
      *    The elements are separated by spaces.
      *    The rows are separated by newlines.
      *    The matrix is read into the matrix parameter.
-     *    If the matrix cannot be read, the matrix parameter
-     *    is not modified.
      */
 
     /**
