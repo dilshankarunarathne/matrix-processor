@@ -202,6 +202,13 @@ public:
     }
 
     /**
+     * @brief Inverse of a matrix
+     * @return The inverse of the matrix
+     * @details This method calculates the inverse of a matrix
+     *    and returns the result.
+     */
+
+    /**
      * @brief Prints the matrix
      * @details This method prints the matrix to the standard
      *       output stream.
