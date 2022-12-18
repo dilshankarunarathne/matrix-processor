@@ -207,6 +207,16 @@ public:
      * @details This method calculates the inverse of a matrix
      *    and returns the result.
      */
+    Matrix inverse() const {
+        Matrix result;
+        int det = m[0][0] * m[1][1] * m[2][2] + m[0][1] * m[1][2] * m[2][0] + m[0][2] * m[1][0] * m[2][1] - m[0][2] * m[1][1] * m[2][0] - m[0][1] * m[1][0] * m[2][2] - m[0][0] * m[1][2] * m[2][1];
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result.m[i][j] = (m[(i + 1) % 3][(j + 1) % 3] * m[(i + 2) % 3][(j + 2) % 3] - m[(i + 1) % 3][(j + 2) % 3] * m[(i + 2) % 3][(j + 1) % 3]) / det;
+            }
+        }
+        return result;
+    }
 
     /**
      * @brief Prints the matrix
