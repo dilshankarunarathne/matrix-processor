@@ -10,6 +10,7 @@ class Matrix {
 public:
     /**
      * @brief Default constructor
+     * @details Initializes the matrix to the identity matrix
      */
     Matrix() {
         for (int i = 0; i < 3; i++) {
