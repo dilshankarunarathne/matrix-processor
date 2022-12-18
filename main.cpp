@@ -8,7 +8,7 @@
  */
 class Matrix {
 private:
-    int m[3][3];
+    int m[3][3]{};
 
 public:
     /**
