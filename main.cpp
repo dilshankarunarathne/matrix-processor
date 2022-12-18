@@ -258,8 +258,6 @@ public:
     }
 };
 
-void tests();
-
 int main() {
     char isOne;
 
