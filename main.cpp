@@ -58,6 +58,26 @@ public:
         }
     }
 
+    /**
+     * @brief Adds two matrices
+     * @param other The matrix to add
+     * @return The sum of the two matrices
+     * @details This method adds two matrices and returns
+     *        the result.
+     *        The matrices are not modified.
+     *        The result is undefined if the matrices are
+     *        not of the same size.
+     */
+    Matrix add(const Matrix& other) const {
+        Matrix result;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result.m[i][j] = m[i][j] + other.m[i][j];
+            }
+        }
+        return result;
+    }
+
 
 };
 
