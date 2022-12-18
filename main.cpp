@@ -105,6 +105,15 @@ public:
      * @details This method multiplies a matrix with a scalar
      *      and returns the result.
      */
+    Matrix multiply(int scalar) const {
+        Matrix result;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                result.m[i][j] = m[i][j] * scalar;
+            }
+        }
+        return result;
+    }
 
     /**
      * @brief Multiplies two matrices
