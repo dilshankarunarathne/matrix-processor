@@ -7,6 +7,8 @@
  *         operations.
  */
 class Matrix {
+private:
+    int m[3][3];
 public:
     /**
      * @brief Default constructor
