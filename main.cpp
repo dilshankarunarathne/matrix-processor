@@ -265,6 +265,7 @@ int main() {
 
     std::cout << "How many matrices will you be entering (1/2):";
     std::cin >> isOne;
+
     if (isOne == '1') {
         Matrix m1;
         std::cout << "Enter the first matrix: " << std::endl;
