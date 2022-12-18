@@ -263,7 +263,7 @@ void tests();
 int main() {
     char isOne;
 
-    std::cout << "How many matrices will you be entering (1/2): ";
+    std::cout << "How many matrices will you be entering (1/2):";
     std::cin >> isOne;
     if (isOne == '1') {
         Matrix m1;
@@ -289,7 +289,7 @@ int main() {
         std::cout << "The second matrix is: " << std::endl;
         m2.print();
     }
-    
+
     return 0;
 }
 
