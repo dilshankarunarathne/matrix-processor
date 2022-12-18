@@ -234,7 +234,44 @@ public:
 };
 
 int main() {
+    Matrix m1;
+    m1.print();
+    std::cout << std::endl;
+
+    Matrix m2;
+    m2.print();
+    std::cout << std::endl;
+
+    Matrix m3 = m1.add(m2);
+    m3.print();
+    std::cout << std::endl;
+
+    Matrix m4 = m1.subtract(m2);
+    m4.print();
+    std::cout << std::endl;
+
+    Matrix m5 = m1.multiply(2);
+    m5.print();
+    std::cout << std::endl;
+
+    Matrix m6 = m1.multiply(m2);
+    m6.print();
+    std::cout << std::endl;
+
+    Matrix m7 = m1.transpose();
+    m7.print();
+    std::cout << std::endl;
+
+    std::cout << m1.rank() << std::endl;
+    std::cout << std::endl;
+
+    Matrix m8 = m1.adjoin();
+    m8.print();
+    std::cout << std::endl;
+
+    Matrix m9 = m1.inverse();
+    m9.print();
+    std::cout << std::endl;
 
     return 0;
 }
-
