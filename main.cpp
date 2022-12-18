@@ -99,6 +99,14 @@ public:
     }
 
     /**
+     * @brief Multiplies a matrix with a scalar
+     * @param scalar The scalar to multiply with
+     * @return The product of the matrix and the scalar
+     * @details This method multiplies a matrix with a scalar
+     *      and returns the result.
+     */
+
+    /**
      * @brief Multiplies two matrices
      * @param other The matrix to multiply
      * @return The product of the two matrices
