@@ -234,11 +234,11 @@ public:
 };
 
 int main() {
-    Matrix m1;
+    Matrix m1 = Matrix(1, 2, 3, 4, 5, 6, 7, 8, 9);
     m1.print();
     std::cout << std::endl;
 
-    Matrix m2;
+    Matrix m2 = Matrix(5, 6, 7, 8, 2, 4, 3, 4, 9);
     m2.print();
     std::cout << std::endl;
 
