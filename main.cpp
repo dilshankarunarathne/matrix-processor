@@ -2,6 +2,9 @@
 
 /**
  * @brief Implements a three-by-three matrix
+ * @details This class implements a three-by-three matrix
+ *         and provides methods to perform basic matrix
+ *         operations.
  */
 class Matrix {
 public:
