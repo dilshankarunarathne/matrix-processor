@@ -9,6 +9,7 @@
 class Matrix {
 private:
     int m[3][3];
+
 public:
     /**
      * @brief Default constructor
@@ -49,6 +50,8 @@ public:
     /**
      * @brief Copy constructor
      * @param other The matrix to copy
+     * @details Initializes the matrix to the same values as
+     *         the other matrix
      */
     Matrix(const Matrix& other) {
         for (int i = 0; i < 3; i++) {
@@ -90,6 +93,25 @@ public:
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 result.m[i][j] = m[i][j] - other.m[i][j];
+            }
+        }
+        return result;
+    }
+
+    /**
+     * @brief Multiplies two matrices
+     * @param other The matrix to multiply
+     * @return The product of the two matrices
+     * @details This method multiplies two matrices and returns
+     *       the result.
+     */
+    Matrix multiply(const Matrix& other) const {
+        Matrix result;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                for (int k = 0; k < 3; k++) {
+                    result.m[i][j] += m[i][k] * other.m[k][j];
+                }
             }
         }
         return result;
