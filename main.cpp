@@ -236,6 +236,14 @@ public:
 void tests();
 
 int main() {
+    char isOne;
+
+    // Prompts the user to enter the matrix
+    std::cout << "How many matrices will you be entering (1/2): ";
+    std::cin >> isOne;
+    if (isOne == 'y' || isOne == 'Y') {
+        
+    }
 
 
     return 0;
