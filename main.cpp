@@ -288,6 +288,12 @@ int main() {
         m1.print();
         std::cout << "The second matrix is: " << std::endl;
         m2.print();
+        std::cout << "The addition of the two matrices is: " << std::endl;
+        (m1 + m2).print();
+        std::cout << "The subtraction of the two matrices is: " << std::endl;
+        (m1 - m2).print();
+        std::cout << "The multiplication of the two matrices is: " << std::endl;
+        (m1 * m2).print();
     }
 
     return 0;
