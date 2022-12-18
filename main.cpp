@@ -135,6 +135,11 @@ public:
     }
 
     /**
+     * @brief Transposes a matrix
+     * @return The transposed matrix
+     */
+
+    /**
      * @brief Prints the matrix
      * @details This method prints the matrix to the standard
      *       output stream.
