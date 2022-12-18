@@ -153,6 +153,8 @@ public:
     /**
      * @brief Ranks a matrix
      * @return The rank of the matrix
+     * @details This method ranks a matrix and returns
+     *     the result.
      */
 
     /**
