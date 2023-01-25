@@ -139,3 +139,9 @@ newCMatrix newCMatrix::operator/(int scalar) const {
     temp /= scalar;
     return temp;
 }
+
+newCMatrix newCMatrix::operator-() const {
+    newCMatrix temp(*this);
+    temp *= -1;
+    return temp;
+}
