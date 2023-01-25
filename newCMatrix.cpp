@@ -154,3 +154,9 @@ newCMatrix newCMatrix::operator++() {
     *this += 1;
     return *this;
 }
+
+newCMatrix newCMatrix::operator++(int) {
+    newCMatrix temp(*this);
+    *this += 1;
+    return temp;
+}
