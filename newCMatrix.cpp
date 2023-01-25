@@ -149,3 +149,8 @@ newCMatrix newCMatrix::operator-() const {
 newCMatrix newCMatrix::operator+() const {
     return *this;
 }
+
+newCMatrix newCMatrix::operator++() {
+    *this += 1;
+    return *this;
+}
