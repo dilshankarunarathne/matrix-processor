@@ -38,6 +38,8 @@ public:
     cMatrix adjoin() const;
     cMatrix inverse() const;
     int rank() const;
+
+    double determinant() const;
 };
 
 #endif //MATRIX_PROCESSOR_CMATRIX_H
