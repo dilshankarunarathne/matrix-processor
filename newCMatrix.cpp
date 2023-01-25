@@ -192,3 +192,7 @@ bool newCMatrix::operator==(const newCMatrix &rhs) const {
     }
     return true;
 }
+
+bool newCMatrix::operator!=(const newCMatrix &rhs) const {
+    return !(*this == rhs);
+}
