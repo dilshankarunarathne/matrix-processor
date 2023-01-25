@@ -40,6 +40,8 @@ public:
     int rank() const;
 
     double determinant() const;
+
+    cMatrix subMatrix(int row, int col) const;
 };
 
 #endif //MATRIX_PROCESSOR_CMATRIX_H
