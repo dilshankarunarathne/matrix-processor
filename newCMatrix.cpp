@@ -214,3 +214,12 @@ std::ostream &operator<<(std::ostream &os, const newCMatrix &rhs) {
     }
     return os;
 }
+
+std::istream &operator>>(std::istream &is, newCMatrix &rhs) {
+    for (int i = 0; i < rhs.n; i++) {
+        for (int j = 0; j < rhs.n; j++) {
+            is >> rhs.m[i][j];
+        }
+    }
+    return is;
+}
