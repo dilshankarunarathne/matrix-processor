@@ -3,4 +3,4 @@ project(matrix_processor)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(matrix_processor main.cpp cMatrix.cpp cMatrix.h)
+add_executable(matrix_processor main.cpp cMatrix.cpp cMatrix.h newCMatrix.cpp newCMatrix.h)
