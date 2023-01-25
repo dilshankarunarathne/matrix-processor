@@ -193,18 +193,6 @@ bool newCMatrix::operator==(const newCMatrix &rhs) const {
     return true;
 }
 
-bool newCMatrix::operator!=(const newCMatrix &rhs) const {
-    return !(*this == rhs);
-}
-
-double &newCMatrix::operator()(int i, int j) {
-    return m[i][j];
-}
-
-double newCMatrix::operator()(int i, int j) const {
-    return m[i][j];
-}
-
 std::ostream &operator<<(std::ostream &os, const newCMatrix &rhs) {
     for (int i = 0; i < rhs.n; i++) {
         for (int j = 0; j < rhs.n; j++) {
