@@ -260,9 +260,5 @@ newCMatrix newCMatrix::inverse() const {
 }
 
 int main() {
-    newCMatrix a(3);
-    newCMatrix b(3);
-    std::cin >> a >> b;
-    std::cout << a << b;
     return 0;
 }
