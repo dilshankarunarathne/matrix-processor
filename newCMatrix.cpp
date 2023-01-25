@@ -70,4 +70,11 @@ newCMatrix &newCMatrix::operator+=(const newCMatrix &rhs) {
     return *this;
 }
 
-
+newCMatrix &newCMatrix::operator-=(const newCMatrix &rhs) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            m[i][j] -= rhs.m[i][j];
+        }
+    }
+    return *this;
+}
