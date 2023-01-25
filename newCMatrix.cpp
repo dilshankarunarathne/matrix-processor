@@ -181,3 +181,14 @@ newCMatrix newCMatrix::operator~() const {
     }
     return temp;
 }
+
+bool newCMatrix::operator==(const newCMatrix &rhs) const {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (m[i][j] != rhs.m[i][j]) {
+                return false;
+            }
+        }
+    }
+    return true;
+}
