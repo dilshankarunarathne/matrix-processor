@@ -196,3 +196,7 @@ bool newCMatrix::operator==(const newCMatrix &rhs) const {
 bool newCMatrix::operator!=(const newCMatrix &rhs) const {
     return !(*this == rhs);
 }
+
+double &newCMatrix::operator()(int i, int j) {
+    return m[i][j];
+}
