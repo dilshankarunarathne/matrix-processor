@@ -33,3 +33,30 @@ newCMatrix::newCMatrix(const newCMatrix &rhs) {
         }
     }
 }
+
+newCMatrix::~newCMatrix() {
+    for (int i = 0; i < n; i++) {
+        delete[] m[i];
+    }
+    delete[] m;
+}
+
+newCMatrix &newCMatrix::operator=(const newCMatrix &rhs) {
+    if (this != &rhs) {
+        for (int i = 0; i < n; i++) {
+            delete[] m[i];
+        }
+        delete[] m;
+        n = rhs.n;
+        m = new double*[n];
+        for (int i = 0; i < n; i++) {
+            m[i] = new double[n];
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                m[i][j] = rhs.m[i][j];
+            }
+        }
+    }
+    return *this;
+}
