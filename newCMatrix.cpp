@@ -228,6 +228,12 @@ newCMatrix operator*(const newCMatrix &m, const int scalar) {
     return temp;
 }
 
+newCMatrix operator*(const int scalar, const newCMatrix &m) {
+    newCMatrix temp(m);
+    temp *= scalar;
+    return temp;
+}
+
 int main() {
     newCMatrix a(3);
     newCMatrix b(3);
