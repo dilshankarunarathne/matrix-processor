@@ -254,6 +254,11 @@ newCMatrix newCMatrix::adjoin() const {
     return temp;
 }
 
+newCMatrix newCMatrix::inverse() const {
+    newCMatrix temp(n);
+    return temp;
+}
+
 int main() {
     newCMatrix a(3);
     newCMatrix b(3);
