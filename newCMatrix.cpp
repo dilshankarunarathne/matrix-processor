@@ -115,3 +115,9 @@ newCMatrix newCMatrix::operator+(const newCMatrix &rhs) const {
     temp += rhs;
     return temp;
 }
+
+newCMatrix newCMatrix::operator-(const newCMatrix &rhs) const {
+    newCMatrix temp(*this);
+    temp -= rhs;
+    return temp;
+}
