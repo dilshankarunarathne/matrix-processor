@@ -171,3 +171,13 @@ newCMatrix newCMatrix::operator--(int) {
     *this -= 1;
     return temp;
 }
+
+newCMatrix newCMatrix::operator~() const {
+    newCMatrix temp(n);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            temp.m[i][j] = m[j][i];
+        }
+    }
+    return temp;
+}
