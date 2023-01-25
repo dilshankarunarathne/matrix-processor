@@ -13,6 +13,7 @@
 #ifndef MATRIX_PROCESSOR_NEWCMATRIX_H
 #define MATRIX_PROCESSOR_NEWCMATRIX_H
 
+#include <iostream>
 
 class newCMatrix {
 private:
@@ -35,8 +36,8 @@ public:
     friend newCMatrix operator*(const newCMatrix& m, const int scalar);
     friend newCMatrix operator*(const int scalar, const newCMatrix& m);
 
-    friend istream& operator>>(istream& in, newCMatrix& matrix);
-    friend ostream& operator<<(ostream& out, const newCMatrix& matrix);
+    friend std::istream& operator>>(std::istream& in, newCMatrix& matrix);
+    friend std::ostream& operator<<(std::ostream& out, const newCMatrix& matrix);
 
     void set(int i, int j, double val);
     double get(int i, int j) const;
