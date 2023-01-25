@@ -223,3 +223,19 @@ std::istream &operator>>(std::istream &is, newCMatrix &rhs) {
     }
     return is;
 }
+
+int main() {
+    newCMatrix a(3);
+    newCMatrix b(3);
+    std::cin >> a >> b;
+    std::cout << a << b;
+    std::cout << a + b << a - b << a * b << a * 2 << a / 2 << -a << +a << ++a << a++ << --a << a-- << ~a << (a == b) << (a != b);
+    a += b;
+    a -= b;
+    a *= b;
+    a *= 2;
+    a /= 2;
+    a(1, 1) = 1;
+    std::cout << a(1, 1);
+    return 0;
+}
