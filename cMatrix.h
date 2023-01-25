@@ -42,6 +42,8 @@ public:
     double determinant() const;
 
     cMatrix subMatrix(int row, int col) const;
+
+    double pow(int i, int i1) const;
 };
 
 #endif //MATRIX_PROCESSOR_CMATRIX_H
