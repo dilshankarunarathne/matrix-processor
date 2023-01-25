@@ -200,3 +200,7 @@ bool newCMatrix::operator!=(const newCMatrix &rhs) const {
 double &newCMatrix::operator()(int i, int j) {
     return m[i][j];
 }
+
+double newCMatrix::operator()(int i, int j) const {
+    return m[i][j];
+}
