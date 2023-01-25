@@ -133,3 +133,9 @@ newCMatrix newCMatrix::operator*(int scalar) const {
     temp *= scalar;
     return temp;
 }
+
+newCMatrix newCMatrix::operator/(int scalar) const {
+    newCMatrix temp(*this);
+    temp /= scalar;
+    return temp;
+}
