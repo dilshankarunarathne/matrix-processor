@@ -78,3 +78,16 @@ newCMatrix &newCMatrix::operator-=(const newCMatrix &rhs) {
     }
     return *this;
 }
+
+newCMatrix &newCMatrix::operator*=(const newCMatrix &rhs) {
+    newCMatrix temp(n);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                temp.m[i][j] += m[i][k] * rhs.m[k][j];
+            }
+        }
+    }
+    *this = temp;
+    return *this;
+}
