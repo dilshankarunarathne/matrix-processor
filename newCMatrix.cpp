@@ -101,6 +101,7 @@ newCMatrix &newCMatrix::operator*=(int scalar) {
     return *this;
 }
 
+/*
 newCMatrix &newCMatrix::operator/=(int scalar) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -172,16 +173,6 @@ newCMatrix newCMatrix::operator--(int) {
     return temp;
 }
 
-newCMatrix newCMatrix::operator~() const {
-    newCMatrix temp(n);
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            temp.m[i][j] = m[j][i];
-        }
-    }
-    return temp;
-}
-
 bool newCMatrix::operator==(const newCMatrix &rhs) const {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
@@ -192,6 +183,7 @@ bool newCMatrix::operator==(const newCMatrix &rhs) const {
     }
     return true;
 }
+*/
 
 std::ostream &operator<<(std::ostream &os, const newCMatrix &rhs) {
     for (int i = 0; i < rhs.n; i++) {
@@ -212,18 +204,28 @@ std::istream &operator>>(std::istream &is, newCMatrix &rhs) {
     return is;
 }
 
+newCMatrix operator+(const newCMatrix &m1, const newCMatrix &m2) {
+    newCMatrix temp(m1);
+    temp += m2;
+    return temp;
+}
+
+newCMatrix operator-(const newCMatrix &m1, const newCMatrix &m2) {
+    newCMatrix temp(m1);
+    temp -= m2;
+    return temp;
+}
+
+newCMatrix operator*(const newCMatrix &m1, const newCMatrix &m2) {
+    newCMatrix temp(m1);
+    temp *= m2;
+    return temp;
+}
+
 int main() {
     newCMatrix a(3);
     newCMatrix b(3);
     std::cin >> a >> b;
     std::cout << a << b;
-    std::cout << a + b << a - b << a * b << a * 2 << a / 2 << -a << +a << ++a << a++ << --a << a-- << ~a << (a == b) << (a != b);
-    a += b;
-    a -= b;
-    a *= b;
-    a *= 2;
-    a /= 2;
-    a(1, 1) = 1;
-    std::cout << a(1, 1);
     return 0;
 }
