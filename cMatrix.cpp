@@ -6,16 +6,9 @@
 //
 
 #include "cMatrix.h"
+#include "algorithm"
 
 using namespace std;
-
-// Path: cMatrix.h
-// Compare this snippet from cMatrix.h:
-
-// Path: cMatrix.cpp
-// Compare this snippet from cMatrix.h:
-
-#include "cMatrix.h"
 
 cMatrix::cMatrix(int n) {
     this->n = n;
@@ -235,6 +228,14 @@ double cMatrix::determinant() const {
         det += pow(-1, i) * m[0][i] * subMatrix(0, i).determinant();
     }
     return det;
+}
+
+double cMatrix::pow(int i, int i1) const {
+    double res = 1;
+    for (int j = 0; j < i1; j++) {
+        res *= i;
+    }
+    return res;
 }
 
 int main() {
