@@ -2,7 +2,7 @@
 // Created by Dilshan Karunarathne on 1/25/2023.
 // enables users to enter two matrices of nxn, where n is any positive integer.
 // then the program displays the sum, difference, multiplication, transpose matrices of the two matrices.
-// object oriented principles are used to implement the program.
+// object-oriented principles are used to implement the program.
 //
 
 #include "cMatrix.h"
@@ -77,7 +77,7 @@ cMatrix& cMatrix::operator-=(const cMatrix& rhs) {
 }
 
 cMatrix& cMatrix::operator*=(const cMatrix& rhs) {
-    double** temp = new double*[n];
+    auto** temp = new double*[n];
     for (int i = 0; i < n; i++) {
         temp[i] = new double[n];
     }
