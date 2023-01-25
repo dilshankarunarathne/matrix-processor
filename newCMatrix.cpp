@@ -91,3 +91,21 @@ newCMatrix &newCMatrix::operator*=(const newCMatrix &rhs) {
     *this = temp;
     return *this;
 }
+
+newCMatrix &newCMatrix::operator*=(int scalar) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            m[i][j] *= scalar;
+        }
+    }
+    return *this;
+}
+
+newCMatrix &newCMatrix::operator/=(int scalar) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            m[i][j] /= scalar;
+        }
+    }
+    return *this;
+}
