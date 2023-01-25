@@ -234,6 +234,16 @@ newCMatrix operator*(const int scalar, const newCMatrix &m) {
     return temp;
 }
 
+newCMatrix newCMatrix::transpose() const {
+    newCMatrix temp(n);
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            temp.m[i][j] = m[j][i];
+        }
+    }
+    return temp;
+}
+
 int main() {
     newCMatrix a(3);
     newCMatrix b(3);
